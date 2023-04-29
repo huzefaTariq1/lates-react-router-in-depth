@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Layout from "./layout/Layout";
 import HelpLayout from "./layout/HelpLayout";
-import Contact from "./pages/help/Contact";
+import Contact, { contactAction } from "./pages/help/Contact";
 import Faq from "./pages/help/Faq";
 import NotFound from "./pages/NotFound";
 import ProductsLayout from "./layout/ProductsLayout";
@@ -25,7 +25,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
 
       <Route path="help" element={<HelpLayout />}>
-        <Route path="contact" element={<Contact />} />
+        <Route path="contact" element={<Contact />} action={contactAction} />
         <Route path="faq" element={<Faq />} />
       </Route>
 
